@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  .bg-forth {
+    background-color: #0a0b29;
+    color: #fff;
+  }
+
+  .font{
+    font-family: "Sedan SC", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
