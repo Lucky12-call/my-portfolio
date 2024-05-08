@@ -20,7 +20,7 @@ const About = () => {
           {/* left section */}
           <div className="w-full lg:w-1/2 h-[50dvh] md:h-full mr-2 md:mr-20 relative">
             <img
-              src="images/my-pic3.jpg"
+              src="images/about-avatar.png"
               alt="my-img"
               className="bg-transparent h-3/4 w-3/5 rounded-xl absolute top-2 right-2 ring-2 lg:ring-4 ring-blue-500 hover:scale-105 transition-transform"
             />
