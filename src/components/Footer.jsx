@@ -10,20 +10,20 @@ const Footer = () => {
       </p>
       <div className="flex gap-5 m-5 items-center">
         <a href="https://www.linkedin.com/in/lochan-kumar-8334011b0/">
-          <IconButton>
-            <FaLinkedin className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-blue-500 hover:scale-110 transition-transform" />
+          <IconButton className="bg-transparent">
+            <FaLinkedin color="#218FEC" className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 hover:scale-110 transition-transform " />
           </IconButton>
         </a>
 
         <a href="https://github.com/Lucky12-call">
-          <IconButton>
-            <FaGithub className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-blue-500 hover:scale-110 transition-transform" />
+          <IconButton className="bg-transparent">
+            <FaGithub color="#218FEC" className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 hover:scale-110 transition-transform" />
           </IconButton>
         </a>
 
         <a href="https://twitter.com/LochanKuma2473">
-          <IconButton>
-            <FaXTwitter  className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 text-blue-500 hover:scale-110 transition-transform" />
+          <IconButton className="bg-transparent">
+            <FaXTwitter color="#218FEC"  className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 hover:scale-110 transition-transform" />
           </IconButton>
         </a>
       </div>

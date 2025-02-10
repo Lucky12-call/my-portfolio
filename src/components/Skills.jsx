@@ -1,7 +1,7 @@
 import { skillsArr } from "./skillsData";
 import { useEffect, useRef } from "react";
 import { animateBox } from "./animation";
-import { Progress } from "@material-tailwind/react";
+import ProgressBar from "./ProgressBar";
 
 const Skills = () => {
   const skill = useRef();
@@ -16,7 +16,7 @@ const Skills = () => {
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold pl-2">
           SKILLS
         </h1>
-        <h2 className="text-sm md:text-lg lg:text-xl mt-5 text-center text-blue-500">
+        <h2 className="text-md md:text-xl lg:text-2xl font-semibold mt-5 text-center text-blue-500">
           I Work Hard to Improve My Skills Regularly
         </h2>
         <div className="w-full md:w-4/5 columns-1 md:gap-12 md:columns-2 mx-auto md:mt-5 lg:mt-10  p-5">
@@ -29,7 +29,7 @@ const Skills = () => {
                 <h1>{skill.skillName}</h1>
                 <h1>{skill.value}%</h1>
               </div>
-              <Progress value={skill.value} color="blue" />
+              <ProgressBar  value={skill.value} />
             </div>
           ))}
         </div>

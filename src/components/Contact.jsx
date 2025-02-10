@@ -3,9 +3,11 @@ import { FaLocationDot, FaMessage, FaPhone } from "react-icons/fa6";
 import { useForm } from "react-hook-form";
 import { useEffect, useRef } from "react";
 import { animateBox } from "./animation";
+import { useThemeStore } from "../store/useThemeStore";
 
 const Contact = () => {
   const contact = useRef();
+  const { theme } = useThemeStore();
 
   useEffect(() => {
     animateBox(contact);
@@ -26,14 +28,17 @@ const Contact = () => {
           CONTACT
         </h1>
 
-        <h2 className="text-sm md:text-lg lg:text-xl my-5 text-center text-blue-500">
+        <h2 className="text-md md:text-xl lg:text-2xl font-semibold my-5 text-center text-blue-500">
           I Want to Hear from You
         </h2>
         <div className="w-full md:w-4/5 mx-auto p-5 flex flex-col md:flex-row justify-between">
           {/* left section */}
           <div className="w-full md:w-1/2">
             <div className="flex items-center mb-5">
-              <FaLocationDot className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500" />
+              <FaLocationDot
+                color="white"
+                className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500"
+              />
               <div className="ml-5">
                 <span>Address</span>
                 <br />
@@ -42,7 +47,10 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center mb-5">
-              <FaMessage className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500 " />
+              <FaMessage
+                color="white"
+                className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500 "
+              />
               <div className="ml-5">
                 <span>Email</span>
                 <br />
@@ -51,7 +59,10 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center mb-5">
-              <FaPhone className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500" />
+              <FaPhone
+                color="white"
+                className="text-5xl md:text-6xl p-4 rounded-full bg-blue-500"
+              />
               <div className="ml-5">
                 <span>Phone</span>
                 <br />
@@ -64,11 +75,12 @@ const Contact = () => {
           <div className="w-full md:w-1/2 mt-5 md:mt-0">
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-wrap gap-5"
+              className={`flex flex-wrap gap-5 text-${
+                theme === "light" ? "black" : "white"
+              }`}
             >
               <Input
                 size="lg"
-                color="white"
                 type="text"
                 {...register("name", { required: true })}
                 label="Your Name"
@@ -80,7 +92,6 @@ const Contact = () => {
 
               <Input
                 size="lg"
-                color="white"
                 type="email"
                 {...register("email", { required: true })}
                 label="Your Email"
@@ -92,7 +103,6 @@ const Contact = () => {
 
               <Input
                 size="lg"
-                color="white"
                 type="number"
                 {...register("phone", { required: true })}
                 label="Your Phone"
@@ -103,8 +113,8 @@ const Contact = () => {
               )}
               <Textarea label="Message..." size="lg" {...register("message")} />
               <Button
-                type="submit" 
-                className="px-6 lg:px-8 py-3 lg:py-4  rounded-md bg-gradient-to-r from-blue-500 to-indigo-900 hover:scale-105"
+                type="submit"
+                className="px-6 lg:px-8 py-3 lg:py-4  rounded-md bg-blue-500 hover:scale-105"
               >
                 Submit Now
               </Button>

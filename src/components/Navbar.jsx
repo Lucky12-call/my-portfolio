@@ -3,19 +3,26 @@ import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
 import { Drawer, IconButton } from "@material-tailwind/react";
 import { RxCross2 } from "react-icons/rx";
+import Themes from "./Themes";
+import { useThemeStore } from "../store/useThemeStore";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { theme } = useThemeStore();
 
   return (
     <>
-      <nav className="h-16 w-full flex items-center justify-between px-5 bg-forth sticky top-0 z-[2000]">
+      <nav
+        data-theme={theme}
+        className="h-16 w-full flex items-center justify-between px-5 md:px-16 bg-forth sticky top-0 z-[2000]"
+      >
         <Link to={"/"}>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-indigo-900 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-blue-500 bg-clip-text text-transparent">
             Lochan.dev
           </h1>
         </Link>
-        <div className="hidden lg:flex flex-col md:flex-row gap-5 pl-5 md:pl-0 md:gap-10 text-md md:text-xl">
+
+        <div className="hidden lg:flex flex-col md:flex-row items-center gap-5 pl-5 md:pl-0 md:gap-10 text-md md:text-xl">
           <a href="#about" className="hover:text-blue-500 transition-colors">
             About
           </a>
@@ -28,9 +35,16 @@ const Navbar = () => {
           <a href="#contact" className="hover:text-blue-500 transition-colors">
             Contact
           </a>
+
+          <Themes />
         </div>
 
-        <Drawer open={open} onClose={() => setOpen(false)} className="bg-forth">
+        <Drawer
+          data-theme={theme}
+          open={open}
+          onClose={() => setOpen(false)}
+          className="bg-forth"
+        >
           <div className="mb-2 flex items-center justify-end p-4">
             <IconButton
               variant="text"
@@ -66,17 +80,18 @@ const Navbar = () => {
             >
               Contact
             </a>
+
           </div>
         </Drawer>
 
-        <IconButton  variant="text"  className="lg:hidden text-white">
-
+        <IconButton variant="text" className="lg:hidden text-white">
           <FaBars
             size={26}
-           
+            color={`${theme === "light" ? "black" : "white"}`}
             onClick={() => setOpen(!open)}
-            />
-            </IconButton>
+          />
+        </IconButton>
+        
       </nav>
     </>
   );

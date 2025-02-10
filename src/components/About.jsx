@@ -19,29 +19,34 @@ const About = () => {
         <div className="h-auto w-full md:h-[500px] flex flex-col md:flex-row justify-between items-center md:w-4/5 mx-auto p-5 mt-10 ">
           {/* left section */}
           <div className="w-full lg:w-1/2 h-[50dvh] md:h-full mr-2 md:mr-20 relative">
+            <div className="h-7 w-7 bubble absolute left-5 bottom-8 md:-bottom-8 z-50"></div>
+            <div className="h-10 w-10 bubble absolute left-16 bottom-10 md:-bottom-10 z-50"></div>
+            <div className="h-12 w-12 bubble absolute left-28 bottom-8 md:-bottom-8 z-50"></div>
+            <div className="h-6 w-6 bubble absolute left-48 bottom-8 md:-bottom-8 z-50"></div>
+            <div className="h-12 w-12 bubble absolute left-60 bottom-10 md:-bottom-10 z-50"></div>
+            <div className="h-6 w-6 bubble absolute left-80 bottom-8 md:-bottom-8 z-50"></div>
+
+            <div className="h-6 w-6 bubble absolute right-10 bottom-5 md:-bottom-5 z-50"></div>
+            <div className="h-12 w-12 bubble absolute right-16 bottom-8 md:-bottom-8 z-50"></div>
+
+            <div className="h-8 w-full bg-[#9090ff] absolute bottom-2 md:-bottom-2 blur-2xl left-0 z-50"></div>
+
             <img
               src="images/about-avatar.png"
               alt="my-img"
-              className="bg-transparent h-3/4 w-3/5 rounded-xl absolute top-2 right-2 ring-2 lg:ring-4 ring-blue-500 hover:scale-105 transition-transform"
-            />
-            <img
-              src="images/laptop-img.webp"
-              alt="my-img"
-              className="h-3/5 w-1/2 rounded-xl absolute bottom-2 left-2 ring-2 lg:ring-4 ring-blue-500 hover:scale-105 transition-transform"
+              className="bg-transparent rounded-xl hover:scale-105 transition-transform "
             />
           </div>
 
           {/* right section */}
-          <div className="w-full lg:w-1/2 h-auto lg:h-full lg:ml-5">
+          <div className="w-full lg:w-1/2 h-auto lg:h-full lg:ml-5 mt-10 md:mt-0">
             <h1 className="text-xl md:text-2xl lg:text-3xl mt-5 lg:mt-0">
               My Bio
             </h1>
-            <h1 className="mt-2 lg:mt-5">
-              Hi, I am Lochan Kumar. With the degree BCA in Software Development
+            <h1 className="mt-2 lg:mt-5 ">
+              Hello, I am Lochan Kumar. With the degree BCA in Software Development
               from Singhania University, Jhunjhnu. A Skilled and Passionate
-              Frontend React Developer based in Rajasthan, India. With a solid
-              foundation in HTML, CSS, and JavaScript, I bring creativity and
-              technical expertise to every project.
+              Frontend React Developer based in Rajasthan, India. Experienced MERN stack developer skilled in designing and developing modern, responsive web applications. Proficient in MongoDB, Express.js, React, and Node.js, I bring creativity and technical expertise to build scalable, efficient, and user-centric solutions.
             </h1>
 
             <table className="w-full mt-5 lg:mt-10">
@@ -86,7 +91,7 @@ const About = () => {
               </tbody>
             </table>
 
-            <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-gradient-to-r from-blue-500 to-indigo-900 hover:scale-105">
+            <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-blue-500 hover:scale-105">
               <a
                 href="resume/Lochan-frontend-dev.pdf"
                 download="resume/Lochan-frontend-dev.pdf"

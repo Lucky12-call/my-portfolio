@@ -1,23 +1,38 @@
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 const Cursor = () => {
-    gsap.set('.cursor', {xPercent: -50, yPercent: -50})
-    gsap.set('.follower', {xPercent: -50, yPercent: -50})
+  const [position, setPosition] = useState({x: 0, y: 0})
+  useEffect(() => {
+    // Select the follower element
+    const follower = document.querySelector(".follower");
 
-    var cur = document.querySelector('.cursor');
-    var follow = document.querySelector('.follower');
+    // Set initial position to the center of the viewport
+    gsap.set(follower, { xPercent: -50, yPercent: -50 });
 
-    window.addEventListener('mousemove', e => {
-        gsap.to(cur, 0.2, {x: e.clientX, y: e.clientY})
-        gsap.to(follow, 0.9, {x: e.clientX, y: e.clientY})
-    })
-    
+    // Add mousemove event listener to update the follower's position
+    window.addEventListener("mousemove", (e) => {
+      gsap.to(follower, {
+        duration: 0.9, // Smooth follow speed
+        x: e.clientX, // Update X position
+        y: e.clientY, // Update Y position
+      });
+      setPosition({x: e.clientX, y: e.clientY})
+      console.log(`x: ${e.clientX}, y: ${e.clientY}`);
+    });
+
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("mousemove", () => {});
+    };
+  }, []);
+
   return (
     <>
-        <div className="cursor fixed top-0 left-0 w-4 h-4 rounded-full bg-white z-50"></div>
-        <div className="follower fixed top-0 left-0 w-10 h-10 rounded-full bg-blue-500 opacity-70"></div>
+      <div className="follower" style={{left: `${position.x}px`, top: `${position.y}px`}}></div>
     </>
-  )
-}
+  );
+};
 
-export default Cursor
+export default Cursor;
