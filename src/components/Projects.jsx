@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import { animateBox } from "./animation";
+import { animateBox } from "./data/animation";
 import { Button } from "@material-tailwind/react";
-import { projectArr } from "./projectData";
+import { projectArr } from "./data/projectData";
 import { FaGithub, FaCircleArrowRight } from "react-icons/fa6";
 
 const Projects = () => {

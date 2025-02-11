@@ -23,6 +23,13 @@ export const projectArr = [
   },
   {
     id: 4,
+    projectImg: "images/printify-website.png",
+    projectName: "Printify Website",
+    liveLink: "https://printify-reactjs.vercel.app",
+    githubLink: "https://github.com/Lucky12-call/printify-reactjs.git",
+  },
+  {
+    id: 5,
     projectImg: "images/amrutam-website.png",
     projectName: "Amrutam Website",
     liveLink: "https://amrutam-reactjs.vercel.app",

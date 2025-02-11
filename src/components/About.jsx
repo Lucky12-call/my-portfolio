@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { animateBox } from "./animation";
+import { animateBox } from "./data/animation";
 import { Button } from "@material-tailwind/react";
 
 const About = () => {
@@ -31,10 +31,19 @@ const About = () => {
 
             <div className="h-8 w-full bg-[#9090ff] absolute bottom-2 md:-bottom-2 blur-2xl left-0 z-50"></div>
 
+            {/* Background spotlight */}
+            <div
+              className="absolute w-40 md:w-60 h-96 md:h-[850px] -rotate-45 bg-spotlight rounded-full blur-3xl opacity-50 "
+              style={{
+                left: `-200px`,
+                top: `-250px`,
+              }}
+            ></div>
+
             <img
               src="images/about-avatar.png"
               alt="my-img"
-              className="bg-transparent rounded-xl hover:scale-105 transition-transform "
+              className="bg-transparent rounded-xl hover:scale-105 transition-transform z-50"
             />
           </div>
 
@@ -44,9 +53,14 @@ const About = () => {
               My Bio
             </h1>
             <h1 className="mt-2 lg:mt-5 ">
-              Hello, I am Lochan Kumar. With the degree BCA in Software Development
-              from Singhania University, Jhunjhnu. A Skilled and Passionate
-              Frontend React Developer based in Rajasthan, India. Experienced MERN stack developer skilled in designing and developing modern, responsive web applications. Proficient in MongoDB, Express.js, React, and Node.js, I bring creativity and technical expertise to build scalable, efficient, and user-centric solutions.
+              Hello, I am Lochan Kumar. With the degree BCA in Software
+              Development from Singhania University, Jhunjhnu. A Skilled and
+              Passionate Frontend React Developer based in Rajasthan, India.
+              Experienced MERN stack developer skilled in designing and
+              developing modern, responsive web applications. Proficient in
+              MongoDB, Express.js, React, and Node.js, I bring creativity and
+              technical expertise to build scalable, efficient, and user-centric
+              solutions.
             </h1>
 
             <table className="w-full mt-5 lg:mt-10">

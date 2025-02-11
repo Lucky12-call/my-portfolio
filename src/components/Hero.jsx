@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { animateBox } from "./animation";
+import { animateBox } from "./data/animation";
 import TypingText from "./TypingText";
 import { DiMongodb } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -77,7 +77,7 @@ const Hero = () => {
 
           <div className="h-6 md:h-8 w-full bg-[#9090ff] absolute -bottom-2 blur-2xl left-0"></div>
           <img
-            className="h-72 w-72 sm:h-80 sm:w-80 md:h-[500px] md:w-[500px] mt-10 lg:mt-0  hover:scale-105 transition-transform drop-shadow-lg z-50"
+            className="h-80 w-80 md:h-[500px] md:w-[500px] mt-10 lg:mt-0  hover:scale-105 transition-transform drop-shadow-lg z-50"
             src="images/3d-img.webp"
             alt="main-img"
           />

@@ -19,7 +19,7 @@ function App() {
       <RouterProvider router={router} />
       {/* Background spotlight */}
       <div
-        className="absolute w-40 md:w-60 h-96 md:h-[600px] rotate-45 bg-spotlight rounded-full blur-3xl opacity-50"
+        className="absolute w-40 md:w-60 h-96 md:h-[850px] rotate-45 bg-spotlight rounded-full blur-3xl opacity-50 z-10"
         style={{
           right: `0px`,
           top: `0px`,

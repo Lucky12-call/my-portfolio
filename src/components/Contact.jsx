@@ -2,7 +2,7 @@ import { Button, Input, Textarea } from "@material-tailwind/react";
 import { FaLocationDot, FaMessage, FaPhone } from "react-icons/fa6";
 import { useForm } from "react-hook-form";
 import { useEffect, useRef } from "react";
-import { animateBox } from "./animation";
+import { animateBox } from "./data/animation";
 import { useThemeStore } from "../store/useThemeStore";
 
 const Contact = () => {

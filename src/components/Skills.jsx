@@ -1,6 +1,6 @@
-import { skillsArr } from "./skillsData";
+import { skillsArr } from "./data/skillsData";
 import { useEffect, useRef } from "react";
-import { animateBox } from "./animation";
+import { animateBox } from "./data/animation";
 import ProgressBar from "./ProgressBar";
 
 const Skills = () => {
@@ -12,7 +12,7 @@ const Skills = () => {
 
   return (
     <>
-      <section ref={skill} id="skills" className="mt-10 md:mt-20 w-full">
+      <section ref={skill} id="skills" className="mt-10 md:mt-44 w-full">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold pl-2">
           SKILLS
         </h1>
