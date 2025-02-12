@@ -51,36 +51,43 @@ const Navbar = () => {
               color="white"
               onClick={() => setOpen(false)}
             >
-              <RxCross2 size={26} />
+              <RxCross2
+                size={26}
+                color={`${theme === "light" ? "black" : "white"}`}
+              />
             </IconButton>
           </div>
 
-          <div className="flex flex-col" onClick={() => setOpen(false)}>
+          <div className="flex flex-col">
             <a
               href="#about"
-              className="px-5 py-3 text-lg transition-colors hover:bg-blue-500 border-b border-gray-800"
+              onClick={() => setOpen(false)}
+              className="px-5 py-3 text-lg transition-colors hover:bg-indigo-900 border-b border-gray-800"
             >
               About
             </a>
             <a
               href="#skills"
-              className="px-5 py-3 text-lg transition-colors hover:bg-blue-500 border-b border-gray-800"
+              onClick={() => setOpen(false)}
+              className="px-5 py-3 text-lg transition-colors hover:bg-indigo-900  border-b border-gray-800"
             >
               Skills
             </a>
             <a
               href="#project"
-              className="px-5 py-3 text-lg transition-colors hover:bg-blue-500 border-b border-gray-800"
+              onClick={() => setOpen(false)}
+              className="px-5 py-3 text-lg transition-colors hover:bg-indigo-900  border-b border-gray-800"
             >
               Project
             </a>
             <a
               href="#contact"
-              className="px-5 py-3 text-lg transition-colors hover:bg-blue-500 border-b border-gray-800"
+              onClick={() => setOpen(false)}
+              className="px-5 py-3 text-lg transition-colors hover:bg-indigo-900 border-b border-gray-800"
             >
               Contact
             </a>
-
+            <Themes />
           </div>
         </Drawer>
 
@@ -91,7 +98,6 @@ const Navbar = () => {
             onClick={() => setOpen(!open)}
           />
         </IconButton>
-        
       </nav>
     </>
   );

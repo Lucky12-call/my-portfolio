@@ -18,7 +18,6 @@ const Cursor = () => {
         y: e.clientY, // Update Y position
       });
       setPosition({x: e.clientX, y: e.clientY})
-      console.log(`x: ${e.clientX}, y: ${e.clientY}`);
     });
 
 

@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 import { lazy, Suspense } from "react";
+import Loader from "./Loader";
 
 const About = lazy(() => import("./About"));
 const Skills = lazy(() => import("./Skills"));
@@ -10,7 +11,7 @@ const Footer = lazy(() => import("./Footer"));
 
 const RootLayout = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loader />}>
       <Navbar />
       <section className="w-full max-w-screen xl:w-11/12 mx-auto relative">
         <Hero />

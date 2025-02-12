@@ -101,3 +101,8 @@
     transform: translateY(0%);
   }
 }
+
+.loader-size {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+}
