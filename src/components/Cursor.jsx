@@ -29,7 +29,7 @@ const Cursor = () => {
 
   return (
     <>
-      <div className="follower" style={{left: `${position.x}px`, top: `${position.y}px`}}></div>
+      <div className="follower hidden md:block" style={{left: `${position.x}px`, top: `${position.y}px`}}></div>
     </>
   );
 };
