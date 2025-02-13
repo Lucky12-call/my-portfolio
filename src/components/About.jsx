@@ -105,14 +105,14 @@ const About = () => {
               </tbody>
             </table>
 
-            <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-blue-500 hover:scale-105">
-              <a
-                href="resume/Lochan-MERN-Stack.pdf"
-                download="resume/Lochan-MERN-Stack.pdf"
-              >
+            <a
+              href="resume/Lochan-MERN-Stack.pdf"
+              download="resume/Lochan-MERN-Stack.pdf"
+            >
+              <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-blue-500 hover:scale-105">
                 DOWNLOAD RESUME
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </section>
