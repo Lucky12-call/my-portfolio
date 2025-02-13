@@ -107,8 +107,8 @@ const About = () => {
 
             <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-blue-500 hover:scale-105">
               <a
-                href="resume/Lochan-frontend-dev.pdf"
-                download="resume/Lochan-frontend-dev.pdf"
+                href="resume/Lochan-MERN-Stack.pdf"
+                download="resume/Lochan-MERN-Stack.pdf"
               >
                 DOWNLOAD RESUME
               </a>
