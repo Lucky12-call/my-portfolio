@@ -146,26 +146,3 @@
 .glowing-box .glowing-btn:hover {
   color: #5300a0;
 }
-
-.clip-text {
-  background: linear-gradient(
-    to right,
-    #656565,
-    #7f42a7,
-    #6600c5,
-    #5300a0,
-    #757575,
-    #656565
-  );
-  -webkit-background-clip: text; /* For Safari */
-  background-clip: text;
-  color: transparent; /* Hide the original text color */
-  background-size: 200%;
-  animation: colorFullText 2.5s linear infinite;
-}
-
-@keyframes colorFullText {
-  to {
-    background-position: 200%;
-  }
-}

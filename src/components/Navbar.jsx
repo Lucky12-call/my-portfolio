@@ -17,7 +17,7 @@ const Navbar = () => {
         className="h-16 w-full flex items-center justify-between px-5 md:px-16 bg-forth sticky top-0 z-[2000]"
       >
         <Link to={"/"}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-blue-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-500">
             Lochan.dev
           </h1>
         </Link>

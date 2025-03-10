@@ -41,10 +41,9 @@ const ProgressBar = ({ value }) => {
         style={{
           width: "5%", // Initial width
           height: "100%",
-          // backgroundColor: "#218FEC",
+          backgroundColor: "#218FEC",
           borderRadius: "10px",
         }}
-        className="glowing-box"
       />
     </div>
   );

@@ -39,7 +39,7 @@ const Hero = () => {
                 👋
               </div>
             </div>
-            <br /> I am <span className="clip-text">Lochan</span>,
+            <br /> I am <span className="text-blue-600">Lochan</span>,
           </h1>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             <TypingText lines={lines} speed={100} delayBetweenLines={1000} />
