@@ -39,13 +39,13 @@ const Hero = () => {
                 👋
               </div>
             </div>
-            <br /> I am <span className="text-blue-600">Lochan</span>,
+            <br /> I am <span className="clip-text">Lochan</span>,
           </h1>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
             <TypingText lines={lines} speed={100} delayBetweenLines={1000} />
           </h1>
 
-          <div className="flex items-center gap-5 mt-10">
+          <div className="flex items-center gap-5 mt-5">
             <h1 className="text-sm md:text-lg lg:text-xl border-r-2 border-white pr-2">
               Tech Stack
             </h1>
@@ -64,7 +64,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* main img */}
         <div className="relative">
           <div className="h-5 md:h-7 w-5 md:w-7 bubble absolute left-5 bottom-3"></div>
           <div className="h-8 md:h-10 w-8 md:w-10 bubble absolute left-16 bottom-5"></div>

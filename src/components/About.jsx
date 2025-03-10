@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { animateBox } from "./data/animation";
-import { Button } from "@material-tailwind/react";
+import { ImDownload } from "react-icons/im";
 
 const About = () => {
   const about = useRef();
@@ -106,12 +106,14 @@ const About = () => {
             </table>
 
             <a
-              href="resume/Lochan-MERN-Stack.pdf"
-              download="resume/Lochan-MERN-Stack.pdf"
+              href="resume/Lochan-Kumar-MERN-Stack.pdf"
+              download="resume/Lochan-Kumar-MERN-Stack.pdf"
             >
-              <Button className="px-6 lg:px-8 py-3 lg:py-4 mt-5 rounded-md bg-blue-500 hover:scale-105">
-                DOWNLOAD RESUME
-              </Button>
+              <div className="glowing-box h-10 md:h-12 w-40 md:w-48 mt-5">
+                <button className="glowing-btn text-sm md:text-base uppercase font-medium text-white">
+                  resume <ImDownload className="h-4 md:h-6 w-4 md:w-6" />
+                </button>
+              </div>
             </a>
           </div>
         </div>

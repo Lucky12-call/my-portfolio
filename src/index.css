@@ -73,7 +73,6 @@
   }
 }
 
-
 /* bubble css */
 .bubble {
   border-radius: 50%;
@@ -105,4 +104,68 @@
 .loader-size {
   width: 100px; /* Adjust size as needed */
   height: 100px; /* Adjust size as needed */
+}
+
+/* glowing btn css */
+.glowing-box {
+  position: relative;
+  border-radius: 5px;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+  background-size: 200%;
+  animation: animationGradient 2.5s linear infinite;
+  box-shadow: 0 0 15px white;
+}
+
+@keyframes animationGradient {
+  to {
+    background-position: 200%;
+  }
+}
+
+.glowing-box .glowing-btn {
+  position: absolute;
+  inset: 3px 3px 3px 3px;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: 0.5s ease;
+}
+
+.glowing-box .glowing-btn:hover {
+  color: #5300a0;
+}
+
+.clip-text {
+  background: linear-gradient(
+    to right,
+    #656565,
+    #7f42a7,
+    #6600c5,
+    #5300a0,
+    #757575,
+    #656565
+  );
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent; /* Hide the original text color */
+  background-size: 200%;
+  animation: colorFullText 2.5s linear infinite;
+}
+
+@keyframes colorFullText {
+  to {
+    background-position: 200%;
+  }
 }

@@ -23,13 +23,13 @@ const Skills = () => {
           {skillsArr.map((skill) => (
             <div
               key={skill.id}
-              className="mb-10 hover:scale-105 transition-transform"
+              className="mb-5 md:mb-10 hover:scale-105 transition-transform"
             >
               <div className="flex justify-between items-center">
                 <h1>{skill.skillName}</h1>
                 <h1>{skill.value}%</h1>
               </div>
-              <ProgressBar  value={skill.value} />
+              <ProgressBar value={skill.value} />
             </div>
           ))}
         </div>
