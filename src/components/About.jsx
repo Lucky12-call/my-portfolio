@@ -106,8 +106,8 @@ const About = () => {
             </table>
 
             <a
-              href="resume/Lochan-Kumar-MERN-Stack.pdf"
-              download="resume/Lochan-Kumar-MERN-Stack.pdf"
+            // href="resume/Lochan-Kumar-MERN-Stack.pdf"
+            // download="resume/Lochan-Kumar-MERN-Stack.pdf"
             >
               <div className="glowing-box h-10 md:h-12 w-40 md:w-48 mt-5">
                 <button className="glowing-btn text-sm md:text-base uppercase font-medium text-white">

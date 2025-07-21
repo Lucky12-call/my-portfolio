@@ -21,11 +21,11 @@ const Projects = () => {
         PROJECTS
       </h1>
 
-      <div className="w-full md:w-4/5 mx-auto mt-10 flex flex-col md:flex-row flex-wrap justify-between items-center gap-10">
+      <div className="w-full md:w-4/5 mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-10">
         {projectArr.map((project) => (
           <div
             key={project.id}
-            className="relative w-full md:w-[530px] h-60 md:h-80 overflow-hidden rounded-lg shadow-lg group"
+            className="relative w-full md:w-[500px] h-60 md:h-80 overflow-hidden rounded-lg shadow-lg group"
           >
             {/* Image */}
             <img
